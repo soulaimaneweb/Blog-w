@@ -1,0 +1,465 @@
+/* ============================== 
+-- CUstom Property
+ ============================== */
+:root {
+    --padding-inside:10%;
+    --main-color:#FF8E40;
+}
+
+/* ============================== 
+-- RESET
+ ============================== */
+ body  {
+    overflow-x: hidden;
+ }
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Poppins;
+    font-weight: 500;
+}
+ul {
+    list-style: none;
+}
+li {
+    display: inline-block;
+}
+button {
+    cursor: pointer;
+}
+button,
+input, 
+textarea {
+    background-color: transparent;
+}
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+/* ============================== 
+-- HEADER
+ ============================== */
+.header {
+    height: 80vh;
+    padding: 0 var(--padding-inside);
+    background-color: #191D21;
+    color: white;
+    position: relative;
+}
+.header .head {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 65555555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--padding-inside);
+    transition: 0.3s;
+}
+.header .head.active {
+    background-color: white;
+    box-shadow: 0px 0px 6px #C0C0C0;
+}
+.header .head a h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 1.7em;
+    transform: translateX(-300%);
+    transition: 1s;
+}
+.header .head a h2 span {
+    color: var(--main-color);
+}
+.header .head.active a h2 {
+    color: black;
+}
+.header .head button {
+    background-color: var(--main-color);
+    padding: 10px 25px;
+    transition: 0.4s;
+    border-radius: 2px;
+    transform: translateX(300%);
+    transition: 1s;
+
+}
+.header .head button a {
+    color: white;
+    font-size: 1.1em;
+}
+/* ============================== 
+-- HERO
+ ============================== */
+.header .hero {
+    width: 100%;
+    padding: 0 var(--padding-inside);
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header .hero h2 {
+    font-size: 5em;
+    transform: translateY(100px);
+    transition: 1s;
+    opacity: 0;
+}
+.header .hero p {
+    font-size: 1.1em;
+    color: gray;
+    transform: translateY(100px);
+    transition: 1s;
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+/* ============================== 
+-- CONTENT
+ ============================== */
+.main-content {
+    width: 100%;
+    padding: 0 var(--padding-inside);
+    margin-top: 50px;
+}
+
+.main-content .category-list {
+    text-align: center;
+}
+.main-content .category-list li {
+    padding: 5px 15px ;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+.main-content .category-list li.active {
+    background-color: var(--main-color);
+}
+.main-content .category-list li.active a {
+    color: white;
+}
+.main-content .category-list li a {
+    color: black;
+    font-weight: 600;
+}
+/* BLOGS */
+.main-content .blogs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.main-content  .blogs  .blog {
+    width: 32%;
+    margin: 10px 0;
+    box-shadow: 0px 0px 10px #C0C0C0;
+    padding: 10px;
+    border-radius: 3px;
+    transform: translateY(300px);
+    transition: 1s;
+    opacity: 0;
+}
+.main-content  .blogs  .blog .img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+}
+.main-content  .blogs  .blog .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 2s;
+}
+.main-content  .blogs  .blog .img img:hover {
+    transform: scale(1.4);
+}
+.main-content  .blogs  .blog span {
+    color: var(--main-color);
+    margin: 5px 0;
+}
+.main-content  .blogs  .blog h2 {
+    margin: 10px 0;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.main-content  .blogs  .blog h2:hover {
+    color: var(--main-color);
+}
+.main-content  .blogs  .blog .time {
+    font-size: 0.9em;
+    color: #191D21;
+}
+.main-content  .blogs  .blog p {
+    font-size: 0.9em;
+    color: gray;
+}
+.main-content  .blogs  .blog .profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 15px;
+}
+.main-content  .blogs  .blog .profile img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.main-content  .blogs  .blog .profile h3 {
+    font-size: 1em;
+}
+/* ============================== 
+-- FOOTER
+ ============================== */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 100px var(--padding-inside) 30px;
+}
+.footer h3 {
+    font-size: 1em;
+    color: #191D21;
+}
+.footer h3 span {
+    color: var(--main-color);
+}
+.footer .social-icons-list li a i {
+    color: #191D21;
+    font-size: 1.3em;
+    margin: 0 3px;
+}
+/* ============================== 
+-- BTN TO TOP
+ ============================== */
+.fa-arrow-right {
+    transform: rotate(-90deg);
+    padding: 15px 15px;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0;
+    pointer-events: none;
+}
+.fa-arrow-right:hover {
+    background-color: #191D21;
+}
+.fa-arrow-right.active {
+    pointer-events: all;
+    opacity: 1;
+}
+/* ============================== 
+-- CHANGE WEBSITE COLOR
+ ============================== */
+.colors-container {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    border-radius: 3px;
+    position: fixed;
+    left: -150px;
+    top: 100px;
+    background-color: white;
+    transition: 0.4s;
+}
+.colors-container.active {
+    left: 0;
+}
+.colors-container .fa-gear {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3em;
+    color: var(--main-color);
+    cursor: pointer;
+}
+.colors-container span {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+    display: inline-block;
+    transition: 0.3s;
+}
+.colors-container span:hover {
+    opacity: 1;
+}
+.colors-container span.active {
+    opacity: 1;
+}
+.colors-container span:nth-child(1) {
+    background-color: #0079D3;
+}
+.colors-container span:nth-child(2) {
+    background-color: #FF5A5F;
+}
+.colors-container span:nth-child(3) {
+    background-color: #00A699;
+}
+.colors-container span:nth-child(4) {
+    background-color: #00C6FB;
+}
+.colors-container span:nth-child(5) {
+    background-color: #FF8E40;
+}
+/* ============================== 
+-- POST PAGE
+ ============================== */
+.post-container {
+    text-align: center;
+    position: relative;
+    top: 20%;
+}
+.post-container a {
+    color: var(--main-color);
+
+}
+.post-container h2 {
+    font-size: 3.5em;
+}
+.post-container .img {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.post-container .img  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* POST CONTENT */
+.post-content {
+    padding: 0 var(--padding-inside);
+    margin-top: 250px;
+}
+.post-content p {
+    color: gray;
+    font-size: 0.9em;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+.post-content button {
+    background-color: var(--main-color);
+    padding: 10px 25px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+}
+.post-content button a {
+    color: white;
+}
+.post-content .icons-list {
+    text-align: center;
+    margin-top: 20px;
+}
+.post-content .icons-list i {
+    font-size: 1.3em;
+    color: #191D21;
+    margin: 0 5px;
+    transition: 0.4s;
+}
+.post-content .icons-list i:hover {
+    transform: translateY(-3px);
+    color: var(--main-color);
+}
+
+
+/* ============================== 
+-- RESPONSIVE DESING
+ ============================== */
+
+/* TABLET  DEVICES*/
+@media screen and (max-width:768px) {
+html {
+    font-size: 14px;
+}
+.header .hero h2 {
+    font-size: 4em;
+}
+/* BLOGS */
+.main-content  .blogs  .blog {
+    width: 49%;
+}
+.post-content {
+    margin-top: 200px;
+}
+.post-container h2 {
+    font-size: 3.5em;
+}
+.post-container .img {
+    height: 350px;
+}
+
+
+}
+
+
+
+
+
+/* PHONE SMALL DEVICES */
+
+@media screen and (max-width:550px) {
+    :root {
+        --padding-inside:7%;
+    }
+html {
+    font-size: 14px;
+}
+.header .hero h2 {
+    font-size: 3em;
+}
+/* BLOGS */
+.main-content  .blogs  .blog {
+        width: 100%;
+}
+
+/* FOOTER */
+.footer {
+    flex-direction: column;
+    row-gap: 20px;
+    text-align: center;
+}
+
+/* POST CONTENT */
+.post-content {
+    margin-top: 160px;
+}
+.post-container h2 {
+    font-size: 2.5em;
+}
+.post-container .img {
+    height: 300px;
+}
+
+
+
+
+}
+
+
